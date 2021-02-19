@@ -270,13 +270,16 @@ namespace Semantic
 
             // index 넣어서 저장
             //rgb_imglist[index] = sourceBitmapRgb.;
-            MessageBox.Show(current_idx.ToString());
+            //MessageBox.Show(current_idx.ToString());
             rgb_imglist[current_idx] = new Bitmap(sourceBitmapRgb);
 
             for (int index = 0; index < rgb_imglist.Count(); index++)
             {
                 gray_imglist[index] = RGB2Gray_Click(rgb_imglist[index]);
-                gray_imglist[index].Save(gray_file_path.SelectedPath + imgList[index].Remove(imgList[0].Count() - 4, 4) + "_gray_img.png");
+                rgb_imglist[index] = Gray2RGB_Click(gray_imglist[index]);
+                //MessageBox.Show(gray_file_path.SelectedPath + imgList[index].Remove(imgList[0].Count() - 4, 4) + "_gray_img.png");
+                gray_imglist[index].Save(gray_file_path.SelectedPath + imgList[index].Remove(imgList[0].Count() - 4, 4) + "_gri.png");
+                rgb_imglist[index].Save(gray_file_path.SelectedPath + imgList[index].Remove(imgList[0].Count() - 4, 4) + "_gray_img_t.png");
             }
         }
 

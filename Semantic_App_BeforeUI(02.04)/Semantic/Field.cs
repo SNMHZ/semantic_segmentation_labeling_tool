@@ -86,7 +86,7 @@ namespace Semantic
         //
         public const bool isTestmode = false;                     //원본이미지만 필요
         //
-        public const bool isTest_NoLabel_mode = true;               //모델구동 생략. 레이블링해놓은 GrayScale 이미지를 경로에 둔채로 테스트.                          
+        public const bool isTest_NoLabel_mode = false;               //모델구동 생략. 레이블링해놓은 GrayScale 이미지를 경로에 둔채로 테스트.                          
                                                                     //
                                                                     //public const bool isTest_NoLabel_mode = true;
                                                                     // public const bool isTestmode = true;                       //모델구동+rgb 전부 생략. GraysCale&RGB 이미지를 경로에 둔채로 테스트.                   
